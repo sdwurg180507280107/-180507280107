@@ -24,17 +24,3 @@ $ git config　user.name nickname#将用户名设为nickname
 $ git config　user.email nickname@gmail.com #将用户邮箱设为nickname@gmail.com
 Git的设计哲学和Linux（*nix）一样，尽量的使用“文本化”（Textuality）；它里面尽量用文本化的形式存储信息，对于配置信息也更是如此，用户的这些配置信息全部是存储在文本文件中。Git的全局配置文件是存放在"~/.gitconfig"（用户目录下的.gitconfig）文件中：
 我们用cat、head命令查看全局配置信息文件，并假设相关配置信息存储在文件的前3行（当然也有可能不在前3行，这里只是为了方便表示）
-$ cat ~/.gitconfig | head -3 
-[user]
-name = author
-email = author@corpmail.com
-而项目配置文件是存放在Git项目所在目录的".git/config"文件中，这里也像上面一样用cat、head命令查看一下：
-$ cat .git/config | head -3
-[user]
-name = nickname
-email = nickname@gmail.com
-如果大家对于Git熟悉后，可以直修改”~/.gitconfig”,”.git/config”这两个文件进行配置。
-Git里还有很多可以配置的地方，大家可以参考一下git config 和 定制git。
-
-这一篇写起来有点平淡无奇，但这是一个Git用户迈出的第一步。后面我还会有一系列的文章出来，都是我个人使用过程中的感悟。
-有朋友问我：“为什么把文章叫作：‘Git历险记’”。这是因为在使用Git的历程中，我碰到过N多的问题；同时也觉得它有点小复杂。但是当这些问题解开后，就有时不得不赞叹它设计的巧妙之处。
